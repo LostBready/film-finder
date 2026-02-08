@@ -1,3 +1,4 @@
+// hello :)
 import view from "./view.js"
 
 function app(){
