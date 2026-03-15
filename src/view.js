@@ -6,16 +6,25 @@ function view(state, elements){
                 renderCards(value, elements.cards)
                 break
             case 'isLoading':
-                clearCards(elements.cards)
+                clearContent(elements.cards, elements.errorBox)
                 value ? showPreloader(elements.searchButton) : removePreloader(elements.searchButton)
                 break
+            case 'error':
+                showErrorMessage(value, elements.errorBox)
+                break
         }
+        
     })
     return watch
 }
 
-const clearCards = (cardsDiv) => {
+const showErrorMessage = (message, boxNode) => {
+    boxNode.textContent = message
+}
+
+const clearContent = (cardsDiv, errorBoxNode) => {
     cardsDiv.innerHTML = ''
+    errorBoxNode.innerHTML = ''
 }
 
 const showPreloader = (buttonDiv) => {

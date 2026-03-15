@@ -24,6 +24,10 @@ body{
 
 }
 
+select{
+  width: 100px;
+}
+
 .loader {
   overflow:hidden;
   font-size: 10px;
