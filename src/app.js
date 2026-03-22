@@ -1,10 +1,11 @@
 // hello :)
-import view from "./view.js";
 import "dotenv/config";
+import view from "./view.js";
 
 const API_KEY = process.env.API_KEY;
 
 function app() {
+  console.log(API_KEY)
 
   const initialState = {
     cards: [],
@@ -31,7 +32,7 @@ function app() {
         watch.isLoading = true;
         const searchText = elements.input.value;
         const dataRequest = await fetch(
-          `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchText}&type=${searchType}`,
+          `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchText}&type=${searchType}`,
         );
         const data = await dataRequest.json();
         watch.isLoading = false;

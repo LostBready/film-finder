@@ -7,15 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="search-container">
-        <input type="text">
-        <button>Search</button>
-        <select name="type">
-            <option value="">all</option>
-            <option value="movie">movie</option>
-            <option value="series">series</option>
-            <option value="episode">episode</option>
-        </select>
+    
+    <div id="header">
+        <div id="search-box">
+            <input type="text">
+            <button>
+                <img src="./search.svg" alt="">
+            </button>
+        </div>
+        <div id="sorting">
+            <img src="./filter.svg" alt="">
+                <select name="type">
+                <option value="">all</option>
+                <option value="movie">movie</option>
+                <option value="series">series</option>
+                <option value="episode">episode</option>
+            </select>
+        </div>
     </div>
     <h1 id="error-box"></h1>
     <div id="cards"></div>
